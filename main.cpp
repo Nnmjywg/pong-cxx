@@ -12,7 +12,6 @@
 #include <unistd.h>
 
 #include <SDL2/SDL.h>
-#include <SDL2/SDL_ttf.h>
 
 #include "variables.h"
 //#include "enums.h"
@@ -356,12 +355,7 @@ bool init()
     success = false;
     return success;
   }
-
-  if(TTF_Init() < 0)
-  {
-    success = false;
-    return success;
-  }
+	
   srand(time(NULL)); // Seed rng
 
   // From SDL_Rect.h
